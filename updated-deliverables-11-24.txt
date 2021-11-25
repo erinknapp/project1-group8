@@ -1,0 +1,15 @@
+Friday Deliverables
+
+By the end of Friday:  
+- HTML skeleton completed
+- CSS semi-complete: make it more pretty
+- Be able to console.log() the APIs data
+- Try to understand this API nonsense 
+
+
+Monday Deliverables
+
+
+- HTML done
+- CSS done
+- More specific JavaScript functions calling necessary data from APIs
