@@ -1,61 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 1 - Group 8: Pick It!</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 1 - Group 8: Pick It!</title>
 </head>
+
 <body>
-    <header class="hero">
-        <h1 class=><i class=></i> Pick It!</h1>
-        <p>
-         Enter your location and desired type of cuisine to see the 3 most popular restaurants in your area!
-        </p>
-      </header>
-  
-      <main class="flex-row justify-space-between">
-        <div class="col-12 col-md-4">
-          <div class="card">
-            <h3 class="card-header text-uppercase">Enter Your Zip Code & Desired Cuisine</h3>
-            <form id="user-form" class="card-body">
-              <label class="form-label" for="zip-code">Zip Code</label>
-              <input
-                name="zip-code"
-                id="zip-input"
-                type="text"
-                autofocus="true"
-                class="form-input"
-              />
-              <label class="form-label" for="cuisine-type">Cuisine Type</label>
-              <input
-                name="cuisine-type"
-                id="cuisine-input"
-                type="text"
-                autofocus="true"
-                class="form-input"
-              />
-              <button type="submit" class="btn">Find Restaurant!</button>
-            </form>
-          </div>
-  
-        <div class="col-12 col-md-8">
-          <h2 class="subtitle">
-            Top 3 Restaurants for <span id="cuisine-search-term"></span> in <span id="zip-search-term"></span>
-          </h2>
-          <div id="restaurant-container" class="list-group"></div>
-          <ol id="restaurant-list"></ol>
-          <li>First Restaurant Item Goes here</li>
-          <li>Second Restaurant Item Goes here</li>
-          <li>Third Restaurant Item Goes here</li>
+  <header class="hero">
+    <h1 class=><i class=></i> Pick It!</h1>
+    <p>
+      Enter your location and desired type of cuisine to see the 3 most popular restaurants in your area!
+    </p>
+  </header>
+
+  <main class="flex-row justify-space-between">
+    <div class="col-12 col-md-4">
+      <div class="card">
+        <h3 class="card-header text-uppercase">Enter Your Zip Code & Desired Cuisine</h3>
+        <form id="user-form" class="card-body">
+          <label class="form-label" for="zip-code">Zip Code</label>
+          <input name="zip-code" id="zip-input" type="text" autofocus="true" class="form-input" />
+          <label class="form-label" for="cuisine-type">Cuisine Type</label>
+          <input name="cuisine-type" id="cuisine-input" type="text" autofocus="true" class="form-input" />
+          <button type="submit" class="btn">Find Restaurant!</button>
+        </form>
+      </div>
+
+      <div class="col-12 col-md-8">
+        <h2 class="subtitle">
+          Top 3 Restaurants for <span id="cuisine-search-term"></span> in <span id="zip-search-term"></span>
+        </h2>
+        <div id="restaurant-container" class="list-group"></div>
+        <ol id="restaurant-list"></ol>
+        <li>First Restaurant Item Goes here</li>
+        <li>Second Restaurant Item Goes here</li>
+        <li>Third Restaurant Item Goes here</li>
+      </div>
+
+      <div class="col-12 col-md-8">
+        <h2>Restaurant Locations</h2>
+        <div id="google-maps">
+          <!-- This iFrame API is extremely simple. My suggestion might be to just hide this section until the user clicks on the restaraunt they'd like to view and then we'd pass that exact location in to this iframe as a variable. -->
+          <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?key=AIzaSyALFfph2f0J2EJwVFIHoNS_YVxXsA6P2Mg
+                &q=orlando,fl">
+          </iframe>
         </div>
-        
-        <div class="col-12 col-md-8">
-            <h2>Restaurant Locations</h2>
-            <div id="google-maps">
-                Google Maps iframe goes here
-            </div>
-        </div>
-      </main>
+      </div>
+  </main>
 </body>
+
 </html>
