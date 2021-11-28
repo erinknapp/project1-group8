@@ -1,6 +1,6 @@
-// var userFormEl = document.querySelector(#id of user form) **********
-// var countryNameInputEl = document.querySelector("#WHATEVER THE ID IS") *************
-// var errorEl = document.querySelector("#error div ID") *******
+var userFormEl = document.querySelector("#user-form");
+var countryNameInputEl = document.querySelector("#WHATEVER THE ID IS") 
+var errorEl = document.querySelector("#error div ID") 
 
 
 // checks to see 
