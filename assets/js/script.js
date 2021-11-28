@@ -1,7 +1,10 @@
+// var userFormEl = document.querySelector(#id of user form) **********
 // var countryNameInputEl = document.querySelector("#WHATEVER THE ID IS") *************
 // var errorEl = document.querySelector("#error div ID") *******
 
-var submitUserHandler = function(event) {
+
+// checks to see 
+var submitCountryHandler = function(event) {
 	// *****we need this still - creates a variable that = user input country name******
 	var countryName = countryNameInputEl.value.trim();
 	// checks if country name exists
@@ -12,9 +15,12 @@ var submitUserHandler = function(event) {
 		// error div displays error text in errorEl******
 	}
 } 
+
+// fetches data from user input
 var getCountryData = function (country) {
 	// not sure if this will work
-	fetch("https://world-population.p.rapidapi.com/population?country_name=" + country, {
+	var apiUrl = "https://world-population.p.rapidapi.com/population?country_name=" + country;
+	fetch(apiUrl, {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "world-population.p.rapidapi.com",
@@ -29,6 +35,9 @@ var getCountryData = function (country) {
 });
 }
 
+
 var displayCountryData = function () {
-	
+
 }
+
+userFormEl.addEventListener("submit", submitCountryHandler)
