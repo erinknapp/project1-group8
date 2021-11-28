@@ -8,11 +8,12 @@
 //     fetchPlacesToEat: function ()
 // }
 
-var getPopOver10M = function () {fetch("https://wft-geo-db.p.rapidapi.com/v1/geo/cities?minPopulation=10000", {
+var getPopOver10M = function () {
+	fetch("https://wft-geo-db.p.rapidapi.com/v1/geo/cities?minPopulation=10000000", {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "wft-geo-db.p.rapidapi.com",
-		"x-rapidapi-key": "SIGN-UP-FOR-KEY"
+		"x-rapidapi-key": "5867605f7emsh8f0491558ec3b3dp1c25c4jsndf1f00ebc83d"
 	}
 })
 .then(response => {
