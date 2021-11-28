@@ -1,9 +1,34 @@
-const apiKeyYelp = "qFwMRrFz89YuZqRfKo1Def_bbMCDnBRebVF0aKvoW7-2SjGoHLVH63DTd2_QdE_L-Z-o--y_IsCEFShisIuQ9zj6ecoo8r6-XXsOnPYuW4eUYF88i_HUQd80oSmgYXYx"
+// var countryNameInputEl = document.querySelector("#WHATEVER THE ID IS") *************
+// var errorEl = document.querySelector("#error div ID") *******
 
-const apiKeyGoogle = "AIzaSyALFfph2f0J2EJwVFIHoNS_YVxXsA6P2Mg"
+var submitUserHandler = function(event) {
+	// *****we need this still - creates a variable that = user input country name******
+	var countryName = countryNameInputEl.value.trim();
+	// checks if country name exists
+	if (countryName) {
+		getCountryData(countryName);
+	}
+	else {
+		// error div displays error text in errorEl******
+	}
+} 
+var getCountryData = function (country) {
+	// not sure if this will work
+	fetch("https://world-population.p.rapidapi.com/population?country_name=" + country, {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "world-population.p.rapidapi.com",
+		"x-rapidapi-key": "5867605f7emsh8f0491558ec3b3dp1c25c4jsndf1f00ebc83d"
+	}
+})
+.then(response => {
+	console.log(response);
+})
+.catch(err => {
+	console.error(err);
+});
+}
 
-
-let placesToEat = {
-    apiKey: "",
-    fetchPlacesToEat: function ()
+var displayCountryData = function () {
+	
 }
