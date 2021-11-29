@@ -61,12 +61,16 @@ userCountryInput.addEventListener("click", (e) => {
 				"x-rapidapi-key": "bb2565e4e3msh03afa59d6e059b2p1f662cjsn993ece23cd23"
 			}
 		})
-			// const { name } = 
-			// const { population } = 
-			// const { ranking } = 
+
+			.then(response => response.json())
 			.then(response => {
-				console.log((response).json());
+				console.log(response)
+				const { country_name, population, ranking } = response.body;
+				console.log(country_name, population, ranking)
 			})
+
+
+
 			.catch(err => {
 				console.error(err);
 			});
