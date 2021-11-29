@@ -1,10 +1,11 @@
 var userFormEl = document.querySelector("#user-form");
-var countryNameInputEl = document.querySelector("#WHATEVER THE ID IS") 
-var errorEl = document.querySelector("#error div ID") 
+var countryNameInputEl = document.querySelector("#country-input");
+var errorEl = document.querySelector("#error"); 
 
 
 // checks to see 
 var submitCountryHandler = function(event) {
+	event.preventDefault();
 	// *****we need this still - creates a variable that = user input country name******
 	var countryName = countryNameInputEl.value.trim();
 	// checks if country name exists
@@ -34,7 +35,6 @@ var getCountryData = function (country) {
 	console.error(err);
 });
 }
-
 
 var displayCountryData = function () {
 
