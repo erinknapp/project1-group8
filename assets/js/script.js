@@ -46,6 +46,9 @@ var errorEl = document.querySelector("#error div ID")
 
 //variable to target dom
 var userCountryInput = document.querySelector("#user-country-input");
+var orlando = "orlando";
+var iframeSrc = document.querySelector("#iframe-display").src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyALFfph2f0J2EJwVFIHoNS_YVxXsA6P2Mg&q=" + orlando;
+
 
 //function to take user input and call the data to the console. 
 userCountryInput.addEventListener("click", (e) => {
@@ -70,6 +73,9 @@ userCountryInput.addEventListener("click", (e) => {
 				document.querySelector("#countryName").innerText = "Country Name : " + country_name
 				document.querySelector("#populationNumber").innerText = "Population : " + population
 				document.querySelector("#worldRanking").innerText = "Population Ranking : " + ranking
+				iframeSrc = document.querySelector("#iframe-display").src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyALFfph2f0J2EJwVFIHoNS_YVxXsA6P2Mg&q=" + country_name;
+			
+				
 			})
 
 
