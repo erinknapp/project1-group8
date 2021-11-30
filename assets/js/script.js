@@ -67,9 +67,9 @@ userCountryInput.addEventListener("click", (e) => {
 				console.log(response)
 				const { country_name, population, ranking } = response.body;
 				console.log(country_name, population, ranking)
-				document.querySelector("#countryName").innerText = country_name
-				document.querySelector("#populationNumber").innerText = population
-				document.querySelector("#worldRanking").innerText = ranking
+				document.querySelector("#countryName").innerText = "Country Name : " + country_name
+				document.querySelector("#populationNumber").innerText = "Population : " + population
+				document.querySelector("#worldRanking").innerText = "Population Ranking : " + ranking
 			})
 
 
