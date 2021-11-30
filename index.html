@@ -21,24 +21,25 @@
     </p>
   </header>
 
-  <main class="flex-row justify-space-between">
-      <div class="card">
+  <main>
+      <div class="card column">
         <h3 class="card-header text-uppercase">Search for Countries with Highest Ranking Populations</h3>
         <form id="user-form" class="card-body">
           <label class="form-label" for="zip-code"></label>
           <input name="country-name" id="country-input" type="text" autofocus="true" class="form-input" placeholder="Country Name"/>
-
           <button type="submit" class="btn">Search</button>
         </form>
       </div>
 
       <!--The results from the API call/response-->
-      <div class="results" id="box">
-        <h2 class="subtitle">Results </h2>
+      <div class="columns is-mobile" id="box">
+        <div class="column">
+        <h2> Results </h2>
           <ol id="data"></ol>
-            <li>Country Name</li>
-            <li>Population</li>
-            <li>Where it ranks</li>
+            <li class="sm-card" >Country Name</li>
+            <li class="sm-card">Population</li>
+            <li class="sm-card">Where it ranks</li>
+        </div>
       </div>
 
 <!--Country locations show on the Google Maps API -->
@@ -52,6 +53,7 @@
         </div>
   </main>
   <script src="assets/js/script.js"></script>
+
 </body>
 
 </html>

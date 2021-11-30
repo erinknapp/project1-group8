@@ -8,10 +8,6 @@
     
   }
   
-  * {
-    box-sizing: border-box;
-  }
-  
   header{
       display: flex;
       justify-content: space-around;
@@ -95,10 +91,6 @@
     transform: translate(0, 0);
     box-shadow: 2px 2px var(--dark);
   }
-  
-  .btn-inline {
-    display: inline;
-  }
 
   .form-label, .form-input {
     font-size: 1.5rem;
@@ -109,5 +101,5 @@
 }
 
 .results {
-    display: flexbox;
+    color: var(--dark);
 }
