@@ -103,3 +103,6 @@
 .results {
     color: var(--dark);
 }
+.sm-card {
+    text-decoration: none;
+}
