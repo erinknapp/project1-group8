@@ -12,4 +12,4 @@ Type in country of interest and see world population data and where your country
 
 1. Drop down menu of countries available.
 2. Include the Wikipedia entry 
-3.
+3. Have more than 1 search result display at a time.
