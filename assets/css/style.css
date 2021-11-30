@@ -1,21 +1,27 @@
 :root {
     --primary: #f7f4ea;
     --secondary: #9caea9;
-    --tertiary: #788585;
-    --light-dark: #6f6866;
-    --dark: #75c9c8;
+    --tertiary: #afdedc;
+    --light-dark: #98d7d5;
+    --dark: #399391;
     --border-radius: .3rem;
+    
   }
   
   * {
     box-sizing: border-box;
   }
   
+  header{
+      display: flex;
+      justify-content: space-around;
+  }
+
   body {
     background-color: var(--primary);
     margin: 0;
     padding: 0;
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: 'Comfortaa', cursive;
     color: var(--dark);
     line-height: 1.5;
     font-size: 16px;
@@ -71,15 +77,15 @@
     font-size: 1.3rem;
     text-decoration:none;
     padding: 6px 5px;
-    width: 45%;
+    width: 30%;
     display: block;
     margin: 5px 0;
     border-radius: var(--border-radius);
     color: var(--primary);
     border: none;
     outline: none;
-    background-color: var(--light-dark);
-    box-shadow: 3px 3px var(--dark);
+    background-color: var(--dark);
+    box-shadow: 3px 3px var(--dark --tertiary);
     transform: translate(-1px, -1px);
   }
   
@@ -97,3 +103,11 @@
   .form-label, .form-input {
     font-size: 1.5rem;
   }
+
+.subtitle {
+    color: var(--primary);
+}
+
+.results {
+    display: flexbox;
+}

@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <link rel="stylesheet" href="./assets/css/style.css" />
   <title>Countries Ranked by Population</title>
 </head>
@@ -18,7 +22,6 @@
   </header>
 
   <main class="flex-row justify-space-between">
-    <div class="col-12 col-md-4">
       <div class="card">
         <h3 class="card-header text-uppercase">Search for Countries with Highest Ranking Populations</h3>
         <form id="user-form" class="card-body">
@@ -29,20 +32,17 @@
         </form>
       </div>
 
-      <div class="col-12 col-md-8">
-        <h2 class="subtitle">
-          Top Results <span id="cuisine-search-term"></span> in <span id="zip-search-term"></span>
-        </h2>
-        <div id="restaurant-container" class="list-group"></div>
-        <ol id="restaurant-list"></ol>
-
-        <li>Country Name</li>
-        <li>Population</li>
-        <li>Where it ranks</li>
-
+      <!--The results from the API call/response-->
+      <div class="results" id="box">
+        <h2 class="subtitle">Results </h2>
+          <ol id="data"></ol>
+            <li>Country Name</li>
+            <li>Population</li>
+            <li>Where it ranks</li>
       </div>
 
-      <div class="col-12 col-md-8">
+<!--Country locations show on the Google Maps API -->
+
         <h2>Country Locations</h2>
         <div id="google-maps">
           <!-- This iFrame API is extremely simple. My suggestion might be to just hide this section until the user clicks on the restaraunt they'd like to view and then we'd pass that exact location in to this iframe as a variable. -->
@@ -50,7 +50,6 @@
             src="https://www.google.com/maps/embed/v1/place?key=AIzaSyALFfph2f0J2EJwVFIHoNS_YVxXsA6P2Mg&q=ghana">
           </iframe>
         </div>
-      </div>
   </main>
   <script src="assets/js/script.js"></script>
 </body>
