@@ -1,20 +1,26 @@
-:root {
-  font-family: Comfortaa, sans-serif;
+ * {
+  font-family: 'Oxygen', sans-serif;
+  color:rgb(42, 187, 119);
 }
 
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
 }
-
 
 .sbutton {
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-.textdeco {
-  text-decoration: none;
+span {
+  list-style: none;
+  display: block;
+}
+
+footer p{
+  max-width: 70%;
+  margin: 0 auto;
+  align-items: center;
 }
