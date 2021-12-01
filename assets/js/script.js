@@ -7,8 +7,12 @@ var iframeSrc = document.querySelector("#iframe-display").src = "https://www.goo
 //function to take user input and call the data to the console. 
 userCountryInput.addEventListener("click", (e) => {
 	e.preventDefault();
-	var countryInput = document.querySelector('#country-input').value;
+	var countryInput = document.querySelector('#country-input').value
 	population(countryInput);
+	document.getElementById("user-country-input").reset();
+
+
+
 
 	function population(countryInput) {
 		fetch("https://world-population.p.rapidapi.com/population?country_name=" + countryInput, {
@@ -28,14 +32,17 @@ userCountryInput.addEventListener("click", (e) => {
 				document.querySelector("#populationNumber").innerText = "Population : " + population
 				document.querySelector("#worldRanking").innerText = "Population Ranking : " + ranking
 				iframeSrc = document.querySelector("#iframe-display").src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyALFfph2f0J2EJwVFIHoNS_YVxXsA6P2Mg&q=" + country_name;
-			
-				
+
+
 			})
 
 
 
 			.catch(err => {
-				console.error(err);
+				document.querySelector("#countryName").innerText = "Please enter a valid country name"
+				document.querySelector("#populationNumber").innerText = "Incorrect Input : mexico "
+				document.querySelector("#worldRanking").innerText = "Correct Input : New Zealand"
 			});
+
 	};
 });
