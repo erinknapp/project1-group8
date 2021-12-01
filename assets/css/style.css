@@ -1,5 +1,20 @@
+:root {
+  font-family: Comfortaa, sans-serif;
+}
+
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
+}
+
+
+.sbutton {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.textdeco {
+  text-decoration: none;
 }

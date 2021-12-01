@@ -20,7 +20,7 @@
     <div class="hero-body content">
       <div class="container">
         <h1 class="center">Country Population Rankings</h1>
-          <p class="center">Enter a country name and find out where it ranks in population size!!
+          <p class="is-size-5 center">Enter a country name and find out where it ranks in population size!
           </p>
       </div>
     </div>
@@ -28,36 +28,41 @@
 
 <!--Columns-->
 <section class="section">
-  <div class="container">
+  <div class="container is-fluid">
     <div class="columns">
       <div class="column content">
         <div class="notification box">
-          <h3>Search for Countries with Highest Ranking Populations</h3>
+          <h3 class="title is-size-4">Search for Countries with Highest Ranking Populations</h3>
+            
+            <!--Form Inputs-->
             <form id="user-country-input" class="card-body">
-              <label class="form-label" for="zip-code"></label>
-              <input name="country-name" id="country-input" type="text" autofocus="true" class="form-input" placeholder="Country Name"/>
-
-              <button type="submit" class="button is-success is-rounded">Search</button>
+              <div class="field">
+                <label class="label form-label" for="zip-code">Country</label>
+                <div class="control">
+                  <input name="country-name" id="country-input" type="text" autofocus="true" class="input" placeholder="Country Name"/>
+                    <div class="control">
+                      <button type="submit" class="sbutton button is-link">Search</button>
+                    </div>
+                </div>
+              </div>
             </form>
+            <div class="textdeco">
+              <h2 class="title is-size-4"> Results </h2>
+              <li class="is-size-5" id="countryName">Country Name</li>
+              <li class="is-size-5" id="populationNumber">Population</li>
+              <li class="is-size-5" id="worldRanking">Where it ranks</li>
+            </div>  
         </div>
       </div>
-<!--The results from the API call/response-->
-      <div class="column content">
-        <div class="notification box">
-          <h2> Results </h2>
-          <li id="countryName">Country Name</li>
-          <li id="populationNumber">Population</li>
-          <li id="worldRanking">Where it ranks</li>
-        </div>
-      </div>
+
 <!--Country locations show on the Google Maps API -->
-      <div class="column">
-        <div class="notification box">
+      <div class="column content">
+        <div class="notification box mapsize">
           <h2>Country Locations</h2>
           <div id="google-maps">
             <!-- This iFrame API is extremely simple. My suggestion might be to just hide this section until the user clicks on the restaraunt they'd like to view and then we'd pass that exact location in to this iframe as a variable. -->
-            <iframe width="600" height="450" style="border:0" id="iframe-display" loading="lazy" allowfullscreen
-                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyALFfph2f0J2EJwVFIHoNS_YVxXsA6P2Mg&q=">
+            <iframe width="586" height="450" style="border:0" id="iframe-display" loading="lazy" allowfullscreen
+                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyALFfph2f0J2EJwVFIHoNS_YVxXsA6P2Mg&q=" style="max-width: 128px;">
             </iframe>
           </div>
         </div>
@@ -67,4 +72,11 @@
 </section>
   <script src="assets/js/script.js"></script>
   </body>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Group 8</strong> by <a href="https://github.com/erinknapp/project1-group8">Bryan McGrath, Charles,  Erin Knapp, Thomas Yates </a>
+    </div>
+  </footer>
 </html>
