@@ -1,4 +1,4 @@
-# Group Ate - Country Population Ranking
+# Around the World in Group 8 Milliseconds - Country Population Ranking
 
 ## Where does your country rank in terms of world popluation? We can show you! Type in yours or any country to see!
 
@@ -13,3 +13,5 @@ Type in country of interest and see world population data and where your country
 1. Drop down menu of countries available.
 2. Include the Wikipedia entry 
 3. Have more than 1 search result display at a time.
+
+### Screenshots of App
